@@ -276,12 +276,13 @@ body{
 
 .vertical-scroll {
   width: 100%;
-  animation: scrollVertical 70s linear infinite;
+  animation: scrollVertical 80s linear infinite;
   transform: translateY(0);
+  will-change: transform;
 }
 
 .vertical-scroll.fast {
-  animation-duration: 50s;
+  animation-duration: 60s;
 }
 
 .vertical-scroll::before,
@@ -290,7 +291,7 @@ body{
   position: absolute;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 150px;
   pointer-events: none;
   z-index: 1;
 }
@@ -303,10 +304,6 @@ body{
 .vertical-scroll::after {
   bottom: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-}
-
-.hovered {
-  animation-play-state: paused;
 }
 
 @keyframes scrollVertical {

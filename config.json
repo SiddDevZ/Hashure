@@ -1,4 +1,4 @@
 {
-    "backend_url": "https://api.siddz.com/proofly",
+    "backend_url": "http://localhost:3001",
     "frontend_url": "https://proofly.siddz.com"
 }

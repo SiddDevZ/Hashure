@@ -39,9 +39,10 @@ if (!fs.existsSync(uploadsDir)) {
 const app = new Hono();
 
 app.use('*', cors({
-  origin: [config.frontend_url, config.backend_url],
+  origin: [config.frontend_url, config.backend_url, 'http://localhost:3000', 'http://localhost:3001'],
   allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 }));
 
 mongoose.connect(process.env.DATABASE_URL)

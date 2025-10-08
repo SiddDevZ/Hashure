@@ -115,8 +115,11 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen mb-[1rem] w-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl w-full mx-auto text-center mt-[10rem]">
+      <div className="min-h-screen mb-[1rem] w-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 relative">
+        {/* Grid Background */}
+        <div className="absolute left-0 right-0 top-0 h-[130vh] opacity-70 z-0 hero-grid-bg" aria-hidden="true" />
+        
+        <div className="max-w-4xl w-full mx-auto text-center mt-[10rem] relative z-10">
           <div className="flex justify-center">
             <ShinyText />
           </div>
@@ -162,7 +165,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full max-w-6xl mx-auto mt-16 px-4 bg-[#000000] sm:px-6 lg:px-8">
+        <div className="w-full max-w-6xl mx-auto mt-16 px-4 bg-[#000000] sm:px-6 lg:px-8 relative z-10">
           <div className="aspect-video w-full border-2 border-[#1a1a1a] rounded-xl overflow-hidden">
             <video 
               autoPlay 
@@ -176,8 +179,8 @@ export default function Home() {
             </video>
           </div>
         </div>
-        <div className="max-w-4xl w-full mx-auto">
-          <div className="pt-24">
+        <div className="max-w-4xl w-full mx-auto relative z-10">
+          {/* <div className="pt-24">
             <div className="text-center mb-6">
               <p className=" font-inter text-[#929292]">Trusted by leading institutions & top companies</p>
             </div>
@@ -222,10 +225,10 @@ export default function Home() {
                 className="filter brightness-0 invert hover:opacity-100 transition-all duration-200"
               />
             </div>
-          </div>
+          </div> */}
         </div>
 
-        <div className="w-full dark max-w-[80rem] mx-auto mt-16 ">
+        <div className="w-full dark max-w-[80rem] mx-auto mt-16 relative z-10">
           <TextReveal>Trust in education should be simple. universities stay the source of truth, students own their achievements, and recruiters verify instantly.</TextReveal>
         </div>
 
@@ -320,12 +323,15 @@ export default function Home() {
               <h2 className="font-inter font-bold text-4xl sm:text-5xl text-white mb-4">
                 Trusted by leading institutions worldwide
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-lg text-[#FFFFFF] max-w-3xl mx-auto">
                 Universities, recruiters, and students around the globe trust our platform for secure, instant credential verification.
               </p>
             </div>
             <Reviews />
           </div>
+          <p className="text-center text-sm font-medium mt-14 font-dm-sans text-[#a1a1a1] max-w-3xl mx-auto">
+            *Disclaimer: This is a proof of concept and not a real product. and these are not real reviews.
+          </p>
         </section>
 
         <FaqSection />
@@ -333,13 +339,6 @@ export default function Home() {
       
       <Footer />
       
-      <Particles
-          className="absolute inset-0 -z-10"
-          quantity={100}
-          ease={80}
-          color={"#bdbdbd"}
-          refresh
-        />
 
       {isTransitioning && (
         <div className="route-overlay-enter" aria-hidden="true" />
@@ -356,6 +355,16 @@ export default function Home() {
           z-index: 1000;
           transform-origin: right;
           animation: route-fill-right 500ms ease-in-out forwards;
+        }
+        .hero-grid-bg {
+          background-image: 
+            linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+          background-size: 45px 45px, 45px 45px;
+          background-position: 0 0, 0 0;
+          mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+          -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
+          pointer-events: none;
         }
       `}</style>
     </>

@@ -263,18 +263,18 @@ const page = () => {
                 Proofly
               </Link>
               <span className="text-gray-400">|</span>
-              <span className="text-gray-300 sm:block hidden">Student Vault</span>
+              <span className="text-[#e0e0e0] sm:block hidden">Student Vault</span>
             </div>
             
             <div className="flex items-center space-x-6">
               <div className="text-right">
                 <p className="text-sm font-medium">{student.name}</p>
-                <p className="text-xs text-gray-400">{student.universityName || 'No University'}</p>
+                <p className="text-xs text-[#aaaaaa]">{student.universityName || 'No University'}</p>
               </div>
               
               <button
                 onClick={handleLogout}
-                className="flex items-center sm:space-x-2 sm:px-4 px-3 py-2 text-sm bg-white/5 hover:bg-white/10 border border-white/20 rounded-full transition duration-300"
+                className="flex items-center sm:space-x-2 cursor-pointer sm:px-4 px-3 py-2 text-sm bg-white/5 hover:bg-white/10 border border-white/20 rounded-full transition duration-300"
               >
                 <i className="ri-logout-circle-line"></i>
                 <span className="sm:block hidden">Logout</span>
@@ -285,37 +285,39 @@ const page = () => {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              Your Credential Vault
-            </h1>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Securely stored and verified. Share instantly with employers, download for portfolios.
-            </p>
-          </div>
-          
-          <div className="flex items-center justify-center space-x-12">
-            <div className="flex items-center space-x-3">
-              <div className="w-4 h-4 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/30"></div>
-              <span className="text-sm font-medium text-gray-300">
-                {credentials.length} {credentials.length === 1 ? 'Credential' : 'Credentials'} Secured
-              </span>
+        {credentials.length > 0 && (
+          <div className="mb-16">
+            <div className="text-center mb-8">
+              <h1 className="text-4xl sm:text-5xl font-bold mb-3 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                Your Credential Vault
+              </h1>
+              <p className="text-lg text-[#c9c9c9] max-w-xl mx-auto leading-relaxed">
+                Securely stored and verified. Share instantly with employers, download for portfolios.
+              </p>
             </div>
             
-            <div className="flex items-center space-x-3">
-              <div className="w-4 h-4 bg-[#fbda02] rounded-full shadow-lg shadow-[#fbda02]/30"></div>
-              <span className="text-sm font-medium text-gray-300">Blockchain Verified</span>
-            </div>
+            <div className="flex items-center justify-center space-x-12">
+              <div className="flex items-center space-x-3">
+                <div className="w-4 h-4 bg-green-500 rounded-full shadow-lg shadow-green-500/30"></div>
+                <span className="text-sm font-medium text-gray-300">
+                  {credentials.length} {credentials.length === 1 ? 'Credential' : 'Credentials'} Secured
+                </span>
+              </div>
+              
+              <div className="flex items-center space-x-3">
+                <div className="w-4 h-4 bg-[#fbda02] rounded-full shadow-lg shadow-[#fbda02]/30"></div>
+                <span className="text-sm font-medium text-gray-300">Blockchain Verified</span>
+              </div>
 
-            <div className="flex items-center space-x-3">
-              <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse shadow-lg shadow-blue-500/30"></div>
-              <span className="text-sm font-medium text-gray-300">
-                {credentials.filter(c => c.blockchainTxHash).length} On-Chain
-              </span>
+              <div className="flex items-center space-x-3">
+                <div className="w-4 h-4 bg-blue-500 rounded-full shadow-lg shadow-blue-500/30"></div>
+                <span className="text-sm font-medium text-gray-300">
+                  {credentials.filter(c => c.blockchainTxHash).length} On-Chain
+                </span>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         {credentials.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -425,7 +427,7 @@ const page = () => {
                       className="flex-1 px-4 cursor-pointer py-2.5 bg-[#fbda02] text-black text-sm font-semibold rounded-xl hover:bg-[#e8c602] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 shadow-sm"
                     >
                       <i className={`ri-share-line ${sharingCredentialId === credential._id ? 'animate-pulse' : ''}`}></i>
-                      <span>{sharingCredentialId === credential._id ? 'Copying...' : 'Share'}</span>
+                      <span>Share</span>
                     </button>
                     
                     <button 
@@ -444,16 +446,16 @@ const page = () => {
         ) : (
           /* Empty State */
           <div className="text-center py-24">
-            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-white/5 to-white/10 flex items-center justify-center shadow-2xl">
-              <i className="ri-folder-open-line text-5xl text-gray-400"></i>
+            <div className="w-22 h-22 mx-auto mb-6 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center">
+              <i className="ri-folder-open-line text-4xl text-[#a9a9a9]"></i>
             </div>
             
-            <h3 className="text-3xl font-bold mb-4 text-white">Your Vault is Empty</h3>
-            <p className="text-gray-400 max-w-lg mx-auto mb-8 leading-relaxed">
+            <h3 className="text-3xl font-bold font-dm-sans mb-4 text-white">Your Vault is Empty</h3>
+            <p className="text-[#a9a9a9] font-pop max-w-md mx-auto mb-8 leading-relaxed">
               Once your university issues credentials, they'll appear here securely stored and ready to share.
             </p>
 
-            <div className="flex items-center justify-center space-x-8 text-sm text-gray-500">
+            <div className="flex items-center justify-center space-x-8 font-pop text-sm text-[#c1c1c1]">
               <div className="flex items-center space-x-2">
                 <i className="ri-shield-check-line"></i>
                 <span>Secure Storage</span>
@@ -470,28 +472,7 @@ const page = () => {
           </div>
         )}
       </main>
-
-      {/* Footer */}
-      <footer className="border-t border-white/10 mt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex items-center justify-between">
-            <p className="text-gray-400 text-sm">
-              © 2024 Proofly. Secured by blockchain technology.
-            </p>
-            
-            <div className="flex items-center space-x-4">
-              <button className="text-gray-400 hover:text-white transition duration-300">
-                <i className="ri-question-line"></i>
-              </button>
-              
-              <button className="text-gray-400 hover:text-white transition duration-300">
-                <i className="ri-settings-3-line"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </footer>
-              <Toaster theme="dark" position="bottom-right" richColors />
+      <Toaster theme="dark" position="bottom-right" richColors />
     </div>
   );
 };

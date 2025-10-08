@@ -87,14 +87,14 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-sm border-b py-2.5 border-zinc-800 z-50 w-full">
+      <nav className="fixed top-0 left-0 right-0 bg-[#23232304] backdrop-blur-xs border-b py-2.5 border-zinc-800 z-50 w-full">
         <div className="flex items-center justify-between h-[60px] px-6 lg:h-auto lg:px-0 lg:pl-[1.8rem] lg:gap-x-10 max-w-[66rem] mx-auto">
           <div className="flex items-center gap-x-4 flex-shrink-0">
             <Link href="/" onClick={(e) => { e.preventDefault(); navigateWithOverlay('/', 'homeReveal'); }} className="flex items-center gap-x-3">
-              <div className="flex-shrink-0">
+              {/* <div className="flex-shrink-0">
                 <i className="ri-building-fill text-3xl"></i>
-              </div>
-              <span className="font-pop font-semibold text-xl text-white whitespace-nowrap">
+              </div> */}
+              <span className="font-pop font-semibold text-2xl text-white whitespace-nowrap">
                 Proofly
               </span>
             </Link>
@@ -105,8 +105,7 @@ const Navbar = () => {
               <button key={link.label} onClick={(e) => {
                 if (link.label === 'Careers') {
                   e.preventDefault();
-                  // Placeholder for now - just prevent default
-                  console.log('Careers clicked - placeholder for now');
+                  window.location.href = 'https://onavix.com/careers';
                 } else if (link.label === 'How it works') {
                   handleNavToHomeAnchor(e, 'how-it-works');
                 } else if (link.label === 'Validate') {
@@ -179,8 +178,7 @@ const Navbar = () => {
                   setIsMenuOpen(false);
                   if (link.label === 'Careers') {
                     e.preventDefault();
-                    // Placeholder for now
-                    console.log('Careers clicked - placeholder for now');
+                    window.location.href = 'https://onavix.com/careers';
                   } else if (link.label === 'How it works') {
                     handleNavToHomeAnchor(e, 'how-it-works');
                   } else if (link.label === 'Validate') {

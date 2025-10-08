@@ -64,7 +64,7 @@ const QuestionCard = React.memo(({ question, answer, index, setHoveredIndex, isO
                 className="overflow-hidden transition-all duration-300 ease-in-out"
                 style={{ maxHeight: '0px' }}
             >
-                <p className="text-base text-[#a0a0a0] mt-3 pr-8">
+                <p className="text-base font-pop text-[#a0a0a0] mt-3 pr-8">
                     {answer}
                 </p>
             </div>
@@ -199,7 +199,7 @@ const FaqSection = () => {
     }, [updateHoverStyle, openQuestions, heights, isMobile]);
 
     return (
-        <section className="py-24 sm:py-32">
+        <section id="faqs" className="py-24 sm:py-32">
             <div className="max-w-[86rem] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="max-w-[66rem] mx-auto">
                     <div className="text-center mb-16">
