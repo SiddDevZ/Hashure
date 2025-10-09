@@ -1,14 +1,10 @@
-# 🎓 Proofly - Blockchain-Powered Academic Credential Verification
+# 🎓 Proofly - Blockchain-Powered Credential Verification
 
 <div align="center">
 
-![Proofly](https://img.shields.io/badge/Built%20with-Next.js%2015-black?style=for-the-badge&logo=next.js)
-![Polygon](https://img.shields.io/badge/Blockchain-Polygon-8247e5?style=for-the-badge&logo=polygon)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
 **A decentralized platform for issuing, storing, and verifying academic credentials on the Polygon blockchain**
 
-[Live Demo](https://proofly.siddz.com) • [Report Bug](https://github.com/yourusername/proofly/issues) • [Request Feature](https://github.com/yourusername/proofly/issues)
+[Live Demo](https://proofly.siddz.com) • [Report Bug](https://github.com/SiddDevZ/proofly/issues) • [Request Feature](https://github.com/SiddDevZ/proofly/issues)
 
 </div>
 
@@ -198,7 +194,7 @@ Proofly leverages blockchain technology to create an immutable, decentralized sy
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/proofly-hackathon.git
+   git clone https://github.com/SiddDevZ/proofly-hackathon.git
    cd proofly-hackathon
    ```
 
@@ -657,7 +653,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Developer**: Siddharth  
 **Project Link**: [https://proofly.siddz.com](https://proofly.siddz.com)  
-**GitHub**: [https://github.com/yourusername/proofly-hackathon](https://github.com/yourusername/proofly-hackathon)
+**GitHub**: [https://github.com/SiddDevZ/proofly-hackathon](https://github.com/SiddDevZ/proofly-hackathon)
 
 ---
 
