@@ -14,11 +14,11 @@ export default function Footer() {
                 <i className="ri-building-fill text-3xl"></i>
               </div>
               <span className="font-semibold text-2xl font-inter text-white">
-                Proofly
+                Hashure
               </span>
             </div>
             <p className="text-base font-inter font-medium text-white/60 mt-0.5">
-              © {new Date().getFullYear()} Proofly. All rights reserved.
+              © {new Date().getFullYear()} Hashure. All rights reserved.
             </p>
           </div>
           

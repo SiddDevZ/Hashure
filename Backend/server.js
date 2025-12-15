@@ -49,7 +49,7 @@ mongoose.connect(process.env.DATABASE_URL)
   .then(() => console.log('✅ Database connected'))
   .catch((error) => console.error('❌ Database error:', error));
 
-app.get('/', (c) => c.json({ message: 'Proofly Backend API' }));
+app.get('/', (c) => c.json({ message: 'Hashure Backend API' }));
 
 // Debug route to check file system
 app.get('/debug', (c) => {

@@ -358,9 +358,9 @@ export default function Home() {
         }
         .hero-grid-bg {
           background-image: 
-            linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-          background-size: 45px 45px, 45px 45px;
+            linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+          background-size: 20px 20px, 20px 20px;
           background-position: 0 0, 0 0;
           mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
           -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);

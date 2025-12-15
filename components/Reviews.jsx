@@ -6,7 +6,7 @@ const testimonials = [
     id: 1,
     name: "Dr. Sarah Mitchell",
     position: "Registrar, Test University",
-    quote: "Proofly has revolutionized how we issue and verify degrees. The blockchain technology ensures our credentials can never be forged, giving us complete confidence in the verification process.",
+  quote: "Hashure has revolutionized how we issue and verify degrees. The blockchain technology ensures our credentials can never be forged, giving us complete confidence in the verification process.",
     image: "https://randomuser.me/api/portraits/women/1.jpg",
   },
   {
@@ -48,7 +48,7 @@ const testimonials = [
     id: 7,
     name: "Dr. Amanda Taylor",
     position: "Vice Chancellor, Placeholder University",
-    quote: "Proofly maintains the authority of our institution while modernizing the verification process. It's exactly what higher education needed.",
+  quote: "Hashure maintains the authority of our institution while modernizing the verification process. It's exactly what higher education needed.",
     image: "https://randomuser.me/api/portraits/women/7.jpg",
   },
   {

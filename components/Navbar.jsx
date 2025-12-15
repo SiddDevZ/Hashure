@@ -95,7 +95,7 @@ const Navbar = () => {
                 <i className="ri-building-fill text-3xl"></i>
               </div> */}
               <span className="font-pop font-semibold text-2xl text-white whitespace-nowrap">
-                Proofly
+                Hashure
               </span>
             </Link>
           </div>

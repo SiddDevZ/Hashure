@@ -17,7 +17,7 @@ class BlockchainService {
       const transaction = {
         to: this.wallet.address,
         value: ethers.parseEther('0'),
-        data: ethers.toUtf8Bytes(`PROOFLY:${credentialHash}:${slug}`),
+        data: ethers.toUtf8Bytes(`HASHURE:${credentialHash}:${slug}`),
         gasLimit: 100000
       };
 
@@ -54,7 +54,7 @@ class BlockchainService {
             if (tx.data && tx.data !== '0x') {
               try {
                 const decodedData = ethers.toUtf8String(tx.data);
-                if (decodedData.includes(`PROOFLY:${credentialHash}:`)) {
+                if (decodedData.includes(`HASHURE:${credentialHash}:`)) {
                   console.log('Hash found on blockchain in transaction:', tx.hash);
                   return true;
                 }
