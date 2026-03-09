@@ -9,7 +9,6 @@ import { fileURLToPath } from 'url';
 import fs from 'fs';
 import config from '../config.json' with { type: 'json' };
 
-// Import routes
 import studentAuth from './routes/studentAuth.js';
 import universityAuth from './routes/universityAuth.js';
 import credentialRoutes from './routes/credentialRoutes.js';
