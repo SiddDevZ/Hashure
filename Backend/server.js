@@ -7,7 +7,7 @@ import { serveStatic } from '@hono/node-server/serve-static';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
-import config from '../config.json' assert { type: 'json' };
+import config from '../config.json' with { type: 'json' };
 
 // Import routes
 import studentAuth from './routes/studentAuth.js';
